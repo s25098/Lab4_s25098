@@ -1,7 +1,7 @@
 # Lab4_s25098
 
 # Uruchomienie Lokalnie
-1. Klonowanie Repozytorium
+1. Klonowanie Repozytorium:
    git clone https://github.com/s25098/Lab4_s25098.git
    cd Lab4_s25098
 2. Instalacja Zależności i Uruchomienie Aplikacji
