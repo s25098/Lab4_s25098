@@ -8,7 +8,7 @@ app = Flask(__name__)
 try:
     model = joblib.load('model.pkl')
 except FileNotFoundError:
-    raise FileNotFoundError("Model file 'model.pkl' not found. Please ensure it is in the correct directory.")
+    raise FileNotFoundError("Model file 'model.pkl' not found.")
 
 
 @app.route('/predict', methods=['POST'])
@@ -16,7 +16,7 @@ def predict_endpoint():
     try:
         data = request.get_json()
         if not data:
-            return jsonify({"error": "Brak danych"}), 400
+            return jsonify({"error": "No data"}), 400
 
         input_data = pd.DataFrame([data])
         result = model.predict(input_data)
